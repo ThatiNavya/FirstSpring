@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+						http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd"> <!--
+	bean definitions here -->
+	<bean id="credit" class="com.mavenProject.FirstSpring.CreditCard"> </bean>
+	<bean id="debit" class="com.mavenProject.FirstSpring.DebitCard"> </bean>
+	<bean id="upi" class="com.mavenProject.FirstSpring.UPI"> </bean>
+	<bean id="amazon" class="com.mavenProject.FirstSpring.AmazonPay"> </bean>
+	<bean id="billcollector" class="com.mavenProject.FirstSpring.BillCollector">
+		<property name="p" ref="amazon"> </property>
+	</bean>
+
+
+</beans>
